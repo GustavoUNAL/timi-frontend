@@ -1,0 +1,32 @@
+.container {
+    min-height: 80vh;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #1e3a8a; /* Un azul un poco oscuro */
+  }
+  
+  .formContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .customInput {
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+  }
+  

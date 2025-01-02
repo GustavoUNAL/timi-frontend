@@ -1,0 +1,41 @@
+.mainContainer {
+    min-height: 80vh;
+    padding: 1rem; /* Añadir padding para separación del borde */
+    box-sizing: border-box; /* Asegurar que el padding no incremente el tamaño total */
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #15803d; /* Un tono verde */
+}
+
+.formWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.customInput {
+    border: 1px solid #a3a3a3;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 100%; /* Modificar el ancho para que ocupe el ancho completo del contenedor padre */
+    max-width: 200px; /* Establecer un ancho máximo para evitar que se estire demasiado en pantallas grandes */
+    box-sizing: border-box; /* Asegurar que el padding no incremente el tamaño total */
+}
+
+.gridTasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem; /* Añadir padding para separación del borde */
+    box-sizing: border-box; /* Asegurar que el padding no incremente el tamaño total */
+}
