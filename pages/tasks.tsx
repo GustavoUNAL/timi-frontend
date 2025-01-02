@@ -19,7 +19,7 @@ interface Category {
     name: string;
 }
 
-interface Task {
+export interface Task {
     id: number;
     title: string;
     category_id: number;
@@ -27,6 +27,7 @@ interface Task {
     status: string;
     current_start: number | null;
     created_at?: string;
+    finished_at?: string; // <- Añadimos "finished_at" aquí como opcional
     category?: Category;
 }
 
@@ -162,7 +163,7 @@ export default function TasksPage() {
     };
 
     useEffect(() => {
-        let interval: NodeJS.Timer | undefined;
+        let interval: NodeJS.Timeout | undefined;
         if (Object.keys(timers).length > 0) {
             interval = setInterval(() => {
                 setTasks((prevTasks) =>

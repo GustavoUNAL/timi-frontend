@@ -1,5 +1,5 @@
 import React from 'react';
-import { Task } from '../pages/tasks'; // Asegúrate de que la ruta sea correcta
+import { Task } from '../pages/tasks'; 
 
 interface Props {
   task: Task;
