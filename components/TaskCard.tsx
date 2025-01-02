@@ -7,10 +7,29 @@ interface Props {
   onPause: () => void;
   onFinish: () => void;
   onDelete: () => void;
+  formattedTime: string;
 }
 
-const TaskCard: React.FC<Props> = ({ task, onStart, onPause, onFinish, onDelete }) => {
-  const { title, category, status, time_spent } = task;
+const TaskCard: React.FC<Props> = ({ task, onStart, onPause, onFinish, onDelete, formattedTime }) => {
+  const { title, category, status, created_at, finished_at } = task;
+
+    const formatDate = (dateString: string | undefined): string => {
+        if (!dateString) return 'N/A';
+        try {
+            const date = new Date(dateString);
+            return date.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+            });
+        } catch (error) {
+            console.error("Error parsing date:", error);
+            return 'Invalid Date';
+        }
+    };
+
 
   // Color mappings for status
   const statusColors: Record<string, string> = {
@@ -33,8 +52,14 @@ const TaskCard: React.FC<Props> = ({ task, onStart, onPause, onFinish, onDelete 
         </span>
       </p>
       <p className="text-sm text-gray-700">
-        <span className="font-medium">Time Spent:</span> {time_spent}s
+        <span className="font-medium">Time Spent:</span> {formattedTime}
       </p>
+        <p className="text-sm text-gray-700">
+            <span className="font-medium">Created At:</span> {formatDate(created_at)}
+        </p>
+        <p className="text-sm text-gray-700">
+            <span className="font-medium">Finished At:</span> {formatDate(finished_at)}
+        </p>
 
       <div className="flex gap-2 mt-4">
         {status === 'pending' || status === 'paused' ? (

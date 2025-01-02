@@ -1,5 +1,6 @@
 .container {
     min-height: 80vh;
+    background-color: #2d2f2e;
   }
   
   .title {
@@ -7,7 +8,7 @@
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: center;
-    color: #1e3a8a; /* Un azul un poco oscuro */
+    color: #eaeaea; /* Un azul un poco oscuro */
   }
   
   .formContainer {
@@ -24,6 +25,7 @@
   }
   
   .gridContainer {
+    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;

@@ -7,4 +7,6 @@ body {
   @apply bg-gray-50 text-gray-800;
   margin: 10;
   font-family: sans-serif;
+  background-color: #2d2f2e;
+
 }

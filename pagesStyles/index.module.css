@@ -1,0 +1,158 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #4e4f50; /* Un fondo suave */
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px; /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem; /* espacio entre los botones*/
+    margin-bottom: 30px; /* Margen inferior para espaciar del input */
+}
+
+
+.button {
+    padding: 12px 15px; /* Reducimos el padding horizontal para el ícono */
+    background-color: #242525;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex; /* Hacemos un contenedor flex */
+    align-items: center; /* Centramos el ícono verticalmente */
+    justify-content: center;/* Centramos el icono horizontalmente*/
+}
+
+
+.button:hover {
+    background-color: #1a1b1b;
+}
+.buttonIcon {
+    font-size: 1.2rem; /* Ajusta el tamaño del icono según necesites */
+}
+.inputContainer {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* agregamos un borde al contenedor para mejor visibilidad*/
+    border-radius: 4px;
+    overflow: hidden; /* para que el borde redondeado se vea bien */
+}
+
+.inputField {
+    flex: 1;
+    padding: 12px;
+    border: none; /* Eliminamos el borde del input*/
+    font-size: 1rem;
+    outline: none; /* Quitamos el borde al hacer focus */
+    box-shadow: none; /* Quitamos la sombra*/
+}
+
+.runButton {
+    padding: 12px;/* Reducimos el padding para el ícono */
+    background-color: #0f1011;
+    color: white;
+    border: none;
+    border-radius: 0; /* Eliminar el border radius del boton*/
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    display: flex; /* Hacemos un contenedor flex */
+    align-items: center; /* Centramos el ícono verticalmente */
+    justify-content: center;/* Centramos el icono horizontalmente*/
+
+}
+
+.runButton:hover {
+    background-color: #000000;
+}
+
+
+.sendIcon {
+    font-size: 1.2rem; /* Ajusta el tamaño del icono según necesites */
+}
+.dateDisplay {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Adaptaciones para móviles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 300px;
+    }
+    .Ico {
+        color: rgb(237, 237, 237);
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+    .buttonContainer {
+        flex-direction: column; /* apila los botones en pantallas pequeñas */
+    }
+
+    .button {
+        width: 100%; /* los botones ocupen todo el ancho disponible */
+        margin-bottom: 10px; /* espaciado entre botones */
+        padding: 11px; /* para el icono en mobile*/
+    }
+
+    .inputContainer {
+        flex-direction: flex; /* apila los elementos en pantallas pequeñas */
+    }
+
+    .inputField {
+        margin-right: 0;
+        margin-bottom: 0px;
+    }
+
+    .runButton {
+        width: 15%; /* ocupan todo el ancho disponible en pantallas pequeñas*/
+    }
+}
